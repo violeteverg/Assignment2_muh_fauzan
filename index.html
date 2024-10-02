@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="text-white fixed top-0 left-0 w-full z-50">
+      <div class="bg-black bg-opacity-40 absolute inset-0 z-[-1]"></div>
+      <nav class="container mx-auto px-8 py-4 lg:py-5">
+        <div
+          class="flex justify-between mx-auto items-center lg:w-[80%] font-open-sans"
+        >
+          <div class="flex items-center justify-between lg:w-[40%] space-x-4">
+            <div class="text-xl font-semibold">LOGO</div>
+            <div class="hidden md:flex space-x-8 text-sm">
+              <a href="#home" class="hover:text-gray-300">HOME</a>
+              <a href="#work" class="hover:text-gray-300">WORK</a>
+              <a href="#contact" class="hover:text-gray-300">CONTACT</a>
+              <a href="#about" class="hover:text-gray-300">ABOUT ME</a>
+            </div>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#signup" class="hover:text-gray-300">SIGN UP</a>
+            <a href="#login" class="hover:text-gray-300">LOGIN</a>
+          </div>
+          <button class="mobile-menu-button md:hidden">
+            <img src="./assets/svg/hamburger_icon.svg" alt="menu" />
+          </button>
+        </div>
+      </nav>
+      <div
+        class="mobile-menu hidden md:hidden flex-col items-center py-4 w-full absolute z-50 font-open-sans"
+      >
+        <div class="bg-black bg-opacity-40 absolute inset-0 z-[-1]"></div>
+        <a href="#home" class="block py-2 hover:text-gray-300">HOME</a>
+        <a href="#work" class="block py-2 hover:text-gray-300">WORK</a>
+        <a href="#contact" class="block py-2 hover:text-gray-300">CONTACT</a>
+        <a href="#about" class="block py-2 hover:text-gray-300">ABOUT ME</a>
+        <a href="#signup" class="block py-2 hover:text-gray-300">SIGN UP</a>
+        <a href="#login" class="block py-2 hover:text-gray-300">LOGIN</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section 1 -->
+      <section
+        class="bg-[url('./assets/main-bg.jpg')] bg-cover bg-center bg-no-repeat h-screen lg:h-screen"
+      >
+        <div
+          class="flex flex-col justify-center items-center h-full space-y-6 lg:space-y-16"
+        >
+          <h1
+            class="text-white lg:text-[85px] text-4xl font-normal font-abel tracking-wider"
+          >
+            Play Traditional Game
+          </h1>
+          <p class="text-white text-xl lg:text-3xl font-abel lg:tracking-wider">
+            experience new traditional gameplay
+          </p>
+          <button
+            class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-md w-[40%] font-bold lg:w-[10%] font-open-sans"
+          >
+            PLAY NOW
+          </button>
+          <button
+            class="flex flex-col items-center gap-2 lg:w-[20%] p-1 bottom-4 absolute text-white text-sm font-open-sans"
+          >
+            <p>THE STORY</p>
+            <img src="./assets/svg/scrol_down.svg" alt="scrol_down" />
+          </button>
+        </div>
+      </section>
+      <!-- Section 2 -->
+      <section
+        class="bg-[url('./assets/the-games-bg.jpg')] bg-cover bg-center bg-no-repeat h-screen"
+      >
+        <div
+          class="flex flex-col justify-center lg:items-center h-full lg:px-6 lg:flex-row w-full"
+        >
+          <div
+            class="flex flex-col lg:h-full lg:pt-28 space-y-4 items-center text-white w-full lg:w-[30%] font-abel"
+          >
+            <div>
+              <p class="text-lg lg:text-xl">What's so special</p>
+              <h1 class="text-4xl font-[700px] lg:text-6xl">THE GAMES</h1>
+            </div>
+          </div>
+          <div
+            class="w-full lg:w-[70%] relative mt-28 lg:mt-0 text-white"
+            id="slideshow-container"
+          >
+            <a
+              class="prev absolute top-1/2 left-0 lg:left-[2%] transform -translate-y-1/2 py-2 text-black font-bold text-lg transition duration-500 ease-in-out rounded-l-md cursor-pointer select-none"
+              onclick="plusSlides(-1)"
+            >
+              <img src="./assets/svg/switch_left.svg" alt="arrow_left" />
+            </a>
+
+            <a
+              class="next absolute top-1/2 right-0 lg:right-[2%] transform -translate-y-1/2 py-2 text-black font-bold text-lg transition duration-500 ease-in-out rounded-r-md cursor-pointer select-none"
+              onclick="plusSlides(1)"
+            >
+              <img src="./assets/svg/switch_right.svg" alt="arrow_left" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section
+        class="relative bg-[url('./assets/Group.jpg')] bg-cover bg-center bg-no-repeat h-screen lg:h-screen lg:flex lg:justify-end flex justify-center items-center"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+        ></div>
+        <div
+          class="list-feat flex items-center w-[50%] lg:w-[44%] h-full font-abel tracking-[0.2rem]"
+        >
+          <div class="flex justify-start">
+            <div class="max-w-lg">
+              <h2 class="text-white text-[24px] mb-2 font-[400px]">
+                What's so special?
+              </h2>
+              <h1 class="text-white text-5xl font-bold mb-8">FEATURES</h1>
+              <ul class="feature-list">
+                <li>
+                  <span
+                    class="w-[23px] h-[23px] border-2 border-white rounded-full bg-white absolute left-[2%] transform -translate-x-1/2"
+                  ></span>
+                  <div class="ml-[40px] mb-[50px] text-left w-full lg:w-[70%]">
+                    <h4 class="m-0 text-2xl text-[#ff7f32] line-height-[1.2]">
+                      TRADITIONAL GAMES
+                    </h4>
+                    <p class="text-[14px] text-[#ccc] mt-5">
+                      if you miss your childhood, we provide many traditional
+                      games here
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span
+                    class="w-[23px] h-[23px] border-2 border-white rounded-full bg-[#1a1a1a] absolute left-[2%] transform -translate-x-1/2"
+                  ></span>
+                  <div class="ml-[40px] mb-[50px] text-left w-[50%]">
+                    <h4
+                      class="m-0 text-[20px] text-[#ff7f32] line-height-[1.2]"
+                    >
+                      GAME SUIT
+                    </h4>
+                  </div>
+                </li>
+                <li>
+                  <span
+                    class="w-[23px] h-[23px] border-2 border-white rounded-full bg-[#1a1a1a] absolute left-[2%] transform -translate-x-1/2"
+                  ></span>
+                  <div class="ml-[40px] mb-[50px] text-left w-[50%]">
+                    <h4
+                      class="m-0 text-[20px] text-[#ff7f32] line-height-[1.2]"
+                    >
+                      TBD
+                    </h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section
+        class="bg-[url('./assets/requirements.png')] bg-cover bg-center bg-no-repeat min-h-screen text-white flex flex-col lg:py-12"
+      >
+        <div class="flex-grow flex items-center justify-center pt-8 lg:pt-8">
+          <p class="text-center text-sm lg:text-base font-abel">
+            Can My Computer Run this game?
+          </p>
+        </div>
+
+        <div class="flex-grow flex items-center justify-center p-4 lg:p-24">
+          <div class="w-full">
+            <div class="lg:w-[50%] flex flex-col justify-start">
+              <h1
+                class="text-3xl lg:text-5xl font-bold mb-12 lg:mb-32 font-abel"
+              >
+                SYSTEM REQUIREMENTS
+              </h1>
+              <!-- <table class="w-full border-collapse">
+                <tbody>
+                  <tr>
+                    <td
+                      class="bg-black bg-opacity-50 p-4 border border-slate-400"
+                    >
+                      <h2 class="text-yellow-500 font-semibold mb-2">OS:</h2>
+                      <p class="text-sm lg:text-base">
+                        Windows 7 64-bit only<br />(No OSX support at this time)
+                      </p>
+                    </td>
+                    <td
+                      class="bg-black bg-opacity-50 p-4 border border-slate-400"
+                    >
+                      <h2 class="text-yellow-500 font-semibold mb-2">
+                        PROCESSOR:
+                      </h2>
+                      <p class="text-sm lg:text-base">
+                        Intel Core 2 Duo @ 2.4 GHZ or<br />AMD Athlon X2 @ 2.8
+                        GHZ
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="bg-black bg-opacity-50 p-4 border border-slate-400"
+                    >
+                      <h2 class="text-yellow-500 font-semibold mb-2">
+                        MEMORY:
+                      </h2>
+                      <p class="text-sm lg:text-base">4 GB RAM</p>
+                    </td>
+                    <td
+                      class="bg-black bg-opacity-50 p-4 border border-slate-400"
+                    >
+                      <h2 class="text-yellow-500 font-semibold mb-2">
+                        STORAGE:
+                      </h2>
+                      <p class="text-sm lg:text-base">8 GB available space</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      colspan="2"
+                      class="bg-black bg-opacity-50 p-4 border border-slate-400"
+                    >
+                      <h2 class="text-yellow-500 font-semibold mb-2">
+                        GRAPHICS:
+                      </h2>
+                      <p class="text-sm lg:text-base">
+                        NVIDIA GeForce GTX 660 2GB or<br />AMD Radeon HD 7850
+                        2GB DirectX11 (Shader Model 5)
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table> -->
+
+              <div class="grid grid-cols-2 sm:grid-cols-2">
+                <div class="bg-black bg-opacity-50 p-4 border border-slate-400">
+                  <h2 class="text-yellow-500 font-semibold mb-2 font-abel">
+                    OS:
+                  </h2>
+                  <p class="text-sm lg:text-base font-open-sans">
+                    Windows 7 64-bit only<br />(No OSX support at this time)
+                  </p>
+                </div>
+                <div class="bg-black bg-opacity-50 p-4 border border-slate-400">
+                  <h2 class="text-yellow-500 font-semibold mb-2 font-abel">
+                    PROCESSOR:
+                  </h2>
+                  <p class="font-open-sans">
+                    Intel Core 2 Duo @ 2.4 GHZ or<br />AMD Athlon X2 @ 2.8 GHZ
+                  </p>
+                </div>
+                <div class="bg-black bg-opacity-50 p-4 border border-slate-400">
+                  <h2 class="text-yellow-500 font-semibold mb-2 font-abel">
+                    MEMORY:
+                  </h2>
+                  <p class="font-open-sans">4 GB RAM</p>
+                </div>
+                <div class="bg-black bg-opacity-50 p-4 border border-slate-400">
+                  <h2 class="text-yellow-500 font-semibold mb-2 font-abel">
+                    STORAGE:
+                  </h2>
+                  <p class="font-open-sans">8 GB available space</p>
+                </div>
+                <div
+                  class="bg-black bg-opacity-50 p-4 border border-slate-400 col-span-2"
+                >
+                  <h2 class="text-yellow-500 font-semibold mb-2 font-abel">
+                    GRAPHICS:
+                  </h2>
+                  <p class="font-open-sans">
+                    NVIDIA GeForce GTX 660 2GB or<br />AMD Radeon HD 7850 2GB
+                    DirectX11 (Shader Model 5)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <!-- cardnya jangan lupa mapping di js sajas -->
+      <section
+        id="top-scores"
+        class="bg-[url('./assets/top-score.png')] bg-cover bg-center bg-no-repeat h-full py-12 lg:h-full text-white flex justify-center items-center"
+      >
+        <div
+          class="w-full p-4 h-[80%] flex flex-col lg:flex-row items-center justify-center"
+        >
+          <div class="lg:w-[50%] flex justify-start lg:pl-24">
+            <div
+              class="flex flex-col justify-center items-center mb-10 lg:justify-start lg:items-start"
+            >
+              <div
+                class="flex flex-col flex-wrap mb-4 lg:mb-10 space-y-4 font-abel"
+              >
+                <h2 class="text-4xl lg:text-6xl">TOP SCORES</h2>
+                <p class="text-lg tracking-wider lg:w-[75%]">
+                  This top score from various games provided on this platform
+                </p>
+              </div>
+              <button
+                class="bg-yellow-500 text-black text-sm font-bold px-4 py-3 rounded-md w-[60%] lg:w-[50%] font-open-sans"
+              >
+                SEE MORE
+              </button>
+            </div>
+          </div>
+          <div id="cards-container" class="lg:w-[50%]">
+            <!-- Cards will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 -->
+      <section
+        class="bg-[url('./assets/newsletter.png')] bg-cover bg-center bg-no-repeat h-screen text-white flex justify-center items-center lg:flex-col lg:justify-start"
+      >
+        <div class="w-full lg:mt-24 flex flex-col justify-end items-end">
+          <div class="lg:w-[60%] space-y-8 w-[90%]">
+            <p class="font-abel">Want to say in touch?</p>
+            <h1 class="text-4xl lg:text-5xl font-abel">
+              NEWSLETTER <br />
+              SUBSCRIBE
+            </h1>
+            <p
+              class="text-sm lg:text-base lg:w-[60%] flex flex-wrap w-[80%] font-open-sans"
+            >
+              In order to start receiving our news, all you have to do is enter
+              your email address. Everything else will be taken care of by us.
+              We will send you emails containing information about game. We
+              don’t spam.
+            </p>
+            <div
+              class="flex flex-col space-y-4 lg:space-y-0 items-start lg:items-center lg:gap-2 lg:flex-row lg:w-[60%] font-open-sans"
+            >
+              <input
+                type="text"
+                placeholder="Your Email"
+                class="w-[80%] lg:w-[70%] p-2 rounded-md bg-[#1B1D1E]"
+              />
+              <button
+                class="bg-yellow-500 text-black text-sm font-bold px-4 py-3 rounded-md w-[80%] lg:w-[20%]"
+              >
+                SUBSCRIBE
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section footer -->
+      <!-- textnya jangan lupa di ganti warnya -->
+      <!-- atur lagi jaraknya -->
+      <footer class="bg-[#090B0C] text-white font-open-sans pb-4">
+        <div class="flex flex-col justify-center items-center space-y-6">
+          <div
+            class="flex lg:w-[75%] justify-center items-center lg:items-center lg:justify-end"
+          >
+            <ul
+              class="flex flex-row lg:w-[60%] justify-center gap-2 lg:gap-0 flex-wrap lg:justify-between items-center"
+            >
+              <li>HOME</li>
+              <li>ABOUT</li>
+              <li>GAME FEATURES</li>
+              <li>SYSTEM REQUIREMENTS</li>
+              <li>QUOTES</li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-gray-800 hover:text-blue-500 text-2xl"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-gray-800 hover:text-blue-400 text-2xl"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-gray-800 hover:text-red-500 text-2xl"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-gray-800 hover:text-purple-500 text-2xl"
+                >
+                  <i class="fab fa-twitch"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr class="lg:w-[75%] w-full border border-white" />
+          <div
+            class="flex flex-col lg:flex-row justify-between lg:w-[75%] items-center"
+          >
+            <h2 class="text-[#8C8C8D]">
+              &copy; 2018 Your Game, Inc. All rights reserved
+            </h2>
+            <h2>privacy policy | terms of service | code of conduct</h2>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>

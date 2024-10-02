@@ -1,0 +1,182 @@
+/* This targets the main parent div container */
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.auth-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+  .auth-links {
+    display: none;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+} */
+
+.font-abel {
+  font-family: "Abel", sans-serif;
+}
+
+.font-open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+.list-feat {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+  width: 100%;
+}
+.feature-list li:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2%;
+  width: 2px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: start;
+  /* background-color: #ff7f32; */
+  justify-content: start;
+  /* margin-bottom: 30px; */
+  position: relative;
+}
+
+/* .circle {
+  width: 23px;
+  height: 23px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  position: absolute;
+  left: 2%;
+  transform: translateX(-50%);
+  /* z-index: 1; *
+} */
+
+/* .feature-content {
+  margin-left: 40px; 
+  margin-bottom: 50px;
+  text-align: left;
+  background-color: aqua;
+  width: 80%;
+} */
+/* 
+.feature-content h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #ff7f32;
+  line-height: 1.2;
+} */
+
+/* .feature-content p {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 5px;
+} */
