@@ -36,18 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   document.head.appendChild(style);
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//   const mobileMenuButton = document.querySelector(".mobile-menu-button");
-//   const mobileMenu = document.querySelector(".mobile-menu");
-
-//   function toggleMenu() {
-//     mobileMenu.classList.toggle("hidden");
-//     mobileMenu.classList.toggle("flex");
-//   }
-
-//   mobileMenuButton.addEventListener("click", toggleMenu);
-// });
-
 //  section slideshow
 const slidesData = [
   {
@@ -75,7 +63,7 @@ slidesData.forEach((slide, index) => {
   const slideDiv = document.createElement("div");
   slideDiv.className = "mySlides fade";
   slideDiv.innerHTML = `
-    <div class="relative container bg-slate-300 border w-[90%] mx-auto group">
+    <div class="relative container bg-slate-300 border w-[85%] mx-auto group">
       <img src="${slide.imgSrc}" alt="slide_${
     index + 1
   }" class="block w-full h-full lg:h-[400px]" />
