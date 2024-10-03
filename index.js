@@ -2,10 +2,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuButton = document.querySelector(".mobile-menu-button");
   const mobileMenu = document.querySelector(".mobile-menu");
+  const hamburgerIcon = mobileMenuButton.querySelector(".hamburger-icon");
+  const closeIcon = mobileMenuButton.querySelector(".close-icon");
 
   function toggleMenu() {
     mobileMenu.classList.toggle("hidden");
     mobileMenu.classList.toggle("flex");
+
+    // Toggle between hamburger and close icons
+    hamburgerIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
 
     // Add smooth transition
     if (mobileMenu.classList.contains("flex")) {
@@ -20,21 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   mobileMenuButton.addEventListener("click", toggleMenu);
-
-  // Add CSS for smooth transition
-  const style = document.createElement("style");
-  style.textContent = `
-    .mobile-menu {
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    .mobile-menu.flex {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  `;
-  document.head.appendChild(style);
 });
 //  section slideshow
 const slidesData = [
@@ -123,11 +114,12 @@ function showSlides(n) {
 document.addEventListener("DOMContentLoaded", function () {
   const cards = [
     {
-      image: "./assets/photo.png",
+      image: "./assets/photo_1.svg",
       name: "Evan lathi",
       title: "PC Gamer",
       quote: "One of my gaming highlight of the year",
       date: "June 18, 2021",
+      left: "left-[0.5rem]",
     },
     {
       image: "./assets/photo_2.png",
@@ -135,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Nedrecator",
       quote: "The next big thing in the world of streaming and survival games",
       date: "July 10, 2021",
+      left: "left-[0.3rem]",
     },
     {
       image: "./assets/photo_3.png",
@@ -142,19 +135,15 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Uproxx",
       quote: "Snoop Dogg Playing The Wildly Entertaining 'SOS' Is Ridiculous.",
       date: "December 24, 2021",
+      left: "left-[0.2rem]",
     },
   ];
 
   function getCardAlignment(index) {
-    switch (index) {
-      case 0:
-        return "lg:justify-center";
-      case 1:
-        return "justify-end lg:justify-start";
-      case 2:
-        return "justify-end lg:justify-center";
-      default:
-        return "lg:justify-center";
+    if (index % 2 === 1) {
+      return "justify-start lg:justify-start";
+    } else {
+      return "justify-end lg:justify-end";
     }
   }
 
@@ -167,7 +156,9 @@ document.addEventListener("DOMContentLoaded", function () {
                             <img src="${
                               card.image
                             }" alt="medali" class="z-10" />
-                            <span class="w-[65px] h-[65px] rounded-full bg-yellow-500 absolute left-[0.3rem] top-[56%] transform -translate-y-1/2"></span>
+                            <span class="w-[65px] h-[65px] rounded-full bg-yellow-500 absolute ${
+                              card.left
+                            } top-[56%] transform -translate-y-1/2"></span>
                             <div class="flex flex-col justify-center">
                                 <h2 class="text-2xl text-yellow-500 font-abel">${
                                   card.name
