@@ -13,9 +13,11 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="text-white fixed top-0 left-0 w-full z-50">
-      <div class="bg-black bg-opacity-40 absolute inset-0 z-[-1]"></div>
-      <nav class="container mx-auto px-4 lg:px-2 py-4 lg:py-5">
+    <header class="text-white w-full absolute">
+      <!-- <div class="bg-black bg-opacity-40 absolute inset-0 z-[-1]"></div> -->
+      <nav
+        class="container mx-auto px-4 lg:px-2 py-4 lg:py-5 bg-black bg-opacity-40"
+      >
         <div
           class="flex justify-between mx-auto items-center lg:w-[80%] font-open-sans"
         >
@@ -81,10 +83,12 @@
             PLAY NOW
           </button>
           <button
-            class="flex flex-col items-center gap-2 lg:w-[20%] p-1 bottom-4 absolute text-white text-sm font-open-sans"
+            class="flex flex-col items-center gap-2 lg:w-[20%] p-1 bottom-4 absolute text-white text-sm font-open-sans animate-bounce"
           >
-            <p>THE STORY</p>
-            <img src="./assets/svg/scrol_down.svg" alt="scrol_down" />
+            <a href="#section-2" class="flex flex-col items-center gap-2">
+              <p>THE STORY</p>
+              <img src="./assets/svg/scrol_down.svg" alt="scrol_down" />
+            </a>
           </button>
         </div>
       </section>
@@ -317,7 +321,7 @@
         <div
           class="w-full p-4 h-[80%] flex flex-col lg:flex-row items-center justify-center"
         >
-          <div class="lg:w-[50%] flex justify-start lg:pl-24">
+          <div class="lg:w-[45%] flex justify-start lg:pl-20">
             <div
               class="flex flex-col justify-center items-center mb-10 lg:justify-start lg:items-start"
             >
@@ -364,13 +368,21 @@
             <div
               class="flex flex-col space-y-4 lg:space-y-0 items-start lg:items-center lg:gap-2 lg:flex-row lg:w-[60%] font-open-sans"
             >
-              <input
-                type="text"
-                placeholder="Your Email"
-                class="w-[80%] lg:w-[60%] p-2 rounded-md bg-[#1B1D1E]"
-              />
+              <div
+                class="flex flex-col text-sm bg-gray-800 lg:w-[60%] w-[80%] p-1 rounded-md"
+              >
+                <label for="email" class="text-gray-400 ml-4"
+                  >Your email address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="youremail@binar.co.id"
+                  class="bg-transparent text-orange-400 placeholder:text-orange-400 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
               <button
-                class="bg-yellow-500 text-black text-sm font-bold px-4 py-3 rounded-md w-[80%] lg:w-[40%]"
+                class="bg-yellow-500 text-black text-sm font-bold px-4 py-3.5 rounded-md w-[80%] lg:w-[40%]"
               >
                 SUBSCRIBE
               </button>
@@ -380,7 +392,7 @@
       </section>
       <!-- Section footer -->
       <!-- textnya jangan lupa di ganti warnya -->
-      <!-- atur lagi jaraknya -->
+
       <footer class="bg-[#090B0C] text-white font-open-sans pb-4">
         <div class="flex flex-col justify-center items-center space-y-6">
           <div

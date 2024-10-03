@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function createCard(card, index) {
     return `
             <div class="flex ${getCardAlignment(index)}">
-                <div class="flex flex-col p-4 gap-4 w-full items-center justify-center bg-[#FFFFFF14] lg:w-[70%]">
+                <div class="flex flex-col p-4 rounded-lg gap-4 w-full items-center justify-center bg-[#FFFFFF14] lg:w-[70%]">
                     <div class="flex p-1 justify-between w-full">
                         <div class="relative flex gap-4">
                             <img src="${
